@@ -27,10 +27,6 @@
     "experimentalDecorators": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
-    "typeRoots": [
-      "@types",
-      "node_modules/@types"
-    ],
     "allowJs": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
@@ -43,7 +39,6 @@
     "node_modules"
   ],
   "include": [
-    "./src/**/*.ts",
-    "./plugins/**/*.ts"
+    "./src/**/*.ts"
   ]
 }
