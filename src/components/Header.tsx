@@ -49,7 +49,6 @@ const Header = () => {
             justify="space-between"
             wrap="wrap"
             w="100%"
-            mb={8}
             p={8}
             bg={["secondary", "secondary", "transparent", "transparent"]}
             color={["white", "white", "secondary", "secondary"]}

@@ -15,10 +15,10 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
         <Flex
             align="center"
             justify={{ base: "center", md: "space-around", xl: "space-between" }}
-            direction={{ base: "column-reverse", md: "row" }}
+            direction={{base: "column-reverse", md: "row"}}
             minH="70vh"
             px={8}
-            mb={16}
+            py={16}
         >
             <Stack
                 spacing={4}
