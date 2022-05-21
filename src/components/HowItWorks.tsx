@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Text, Flex, Heading, Box } from "@chakra-ui/react";
 import { CalendarIcon, EditIcon, CheckIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
@@ -39,7 +39,7 @@ const items = [
 interface ItemProps {
     title: string;
     desc: string;
-    icon: JSX.Element;
+    icon: ReactElement;
 }
 
 const ItemRow = ({ title, desc, icon }: ItemProps) => {
@@ -75,6 +75,14 @@ const HowItWorks = () => {
                 {items.map((item, key) => (
                     <ItemRow key={key} title={item.title} desc={item.desc} icon={item.icon} />
                 ))}
+            </Box>
+            <Box w="75%" textAlign="center">
+                <Heading as="h3" size="md" fontWeight="bold" color="primary.800">
+                    You Control Every Step
+                </Heading>
+                <Text>
+                    We only apply to jobs that you approve of. If we don't have enough information to complete an application, we flag it and wait for your input before completing it. We screen record our process and give updates daily.
+                </Text>
             </Box>
         </Flex>
     );

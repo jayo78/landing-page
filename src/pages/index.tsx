@@ -9,8 +9,8 @@ const Index = () => {
                 title="Optimize Your Internship Applications"
                 subtitle="Hate endlessly applying to internships? We'll do it for you and optimize your chances"
                 image="heroImage.jpg"
-                ctaText="Create your account now"
-                ctaLink="/signup"
+                ctaText="Get Started"
+                ctaLink="https://mvvx7n3l5y5.typeform.com/to/YSSf3A3S"
             />
             <HowItWorks />
         </Layout>

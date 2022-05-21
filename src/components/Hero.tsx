@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Box, Button, Flex, Image, Heading, Stack, Text } from "@chakra-ui/react";
+import { ArrowRightIcon } from '@chakra-ui/icons'
 
 interface HeroProps {
     title: string;
@@ -47,12 +48,14 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
                 </Heading>
                 <Link href={ctaLink}>
                     <Button
-                        colorScheme="primary"
+                        bg="secondary"
+                        color="white"
                         borderRadius="8px"
                         py="4"
                         px="4"
                         lineHeight="1"
                         size="md"
+                        rightIcon={<ArrowRightIcon/>}
                     >
                         {ctaText}
                     </Button>

@@ -50,8 +50,8 @@ const Header = () => {
             wrap="wrap"
             w="100%"
             p={8}
-            bg={["secondary", "secondary", "transparent", "transparent"]}
-            color={["white", "white", "secondary", "secondary"]}
+            bg={["primary.400", "primary.400", "transparent", "transparent"]}
+            color={["white", "white", "primary.400", "primary.400"]}
         >
             <Flex align="center">
                 <Logo />
@@ -73,7 +73,6 @@ const Header = () => {
                 >
                     <MenuItem to="/">Home</MenuItem>
                     <MenuItem to="/how">How It works </MenuItem>
-                    <MenuItem to="/faetures">Features </MenuItem>
                     <MenuItem to="/pricing">Pricing </MenuItem>
                     <MenuItem to="/signup" isLast>
                         <Button
@@ -90,7 +89,7 @@ const Header = () => {
                                 ],
                             }}
                         >
-                            Create Account
+                            Weekly Drop
                         </Button>
                     </MenuItem>
                 </Flex>
