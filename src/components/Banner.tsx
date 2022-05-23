@@ -10,7 +10,7 @@ const Banner = () => {
             borderRadius={18}
             align="center"
             direction="column"
-            w="100%"
+            w="95%"
             bg="secondary.100"
         >
             <Heading color="secondary.900" as="h5" size="md">

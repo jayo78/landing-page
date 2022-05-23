@@ -4,9 +4,6 @@ import {
     Link,
     VStack,
     Button,
-    Flex,
-    Stack,
-    Divider,
     chakra,
     Grid,
     GridItem,
@@ -66,8 +63,7 @@ const Features = () => {
                             </Button>
                         </Link>
                         <Text opacity="0.8">
-                            Since we don't know everything about you, we'll need some help with
-                            the details.
+                            {"Since we don't know everything about you, we'll need some help with the details."}
                         </Text>
                     </VStack>
                 </GridItem>
@@ -77,7 +73,7 @@ const Features = () => {
                             templateColumns={{
                                 base: "repeat(1, 1fr)",
                             }}
-                            gap={{base: "4", sm: "8", md: "12"}}
+                            gap={{ base: "4", sm: "8", md: "12" }}
                             p={8}
                         >
                             <Feature
