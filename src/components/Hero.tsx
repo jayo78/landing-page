@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Box, Button, Flex, Image, Heading, Stack, Text } from "@chakra-ui/react";
-import { ArrowRightIcon } from '@chakra-ui/icons'
+import { ArrowRightIcon } from "@chakra-ui/icons";
 
 interface HeroProps {
     title: string;
@@ -16,7 +16,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
         <Flex
             align="center"
             justify={{ base: "center", md: "space-around", xl: "space-between" }}
-            direction={{base: "column-reverse", md: "row"}}
+            direction={{ base: "column-reverse", md: "row" }}
             minH="70vh"
             px={8}
             py={16}
@@ -30,7 +30,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
                     as="h1"
                     size="xl"
                     fontWeight="bold"
-                    color="primary.800"
+                    color="secondary.900"
                     textAlign={["center", "center", "left", "left"]}
                 >
                     {title}
@@ -38,7 +38,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
                 <Heading
                     as="h2"
                     size="md"
-                    color="primary.800"
+                    color="secondary.900"
                     opacity="0.8"
                     fontWeight="normal"
                     lineHeight={1.5}
@@ -48,25 +48,24 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
                 </Heading>
                 <Link href={ctaLink}>
                     <Button
-                        bg="secondary"
-                        color="white"
+                        bg="secondary.100"
+                        color="secondary.900"
+                        border="2px"
+                        borderColor="secondary.900"
                         borderRadius="8px"
                         py="4"
                         px="4"
                         lineHeight="1"
                         size="md"
-                        rightIcon={<ArrowRightIcon/>}
+                        rightIcon={<ArrowRightIcon />}
+                        _hover={{
+                            bg: "secondary.400",
+                        }}
                     >
                         {ctaText}
                     </Button>
                 </Link>
-                <Text
-                    fontSize="xs"
-                    mt={2}
-                    textAlign="center"
-                    color="primary.800"
-                    opacity="0.6"
-                >
+                <Text fontSize="xs" mt={2} textAlign="center" color="black" opacity="0.6">
                     No credit card required.
                 </Text>
             </Stack>
@@ -81,6 +80,6 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
             </Box>
         </Flex>
     );
-}
+};
 
-export default Hero
+export default Hero;

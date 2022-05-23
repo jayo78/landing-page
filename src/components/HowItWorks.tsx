@@ -1,35 +1,28 @@
 import React, { ReactElement } from "react";
-import { Text, Flex, Heading, Box } from "@chakra-ui/react";
-import { CalendarIcon, EditIcon, CheckIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { Text, Grid, GridItem, Flex, Heading, Box } from "@chakra-ui/react";
+import { CalendarIcon, CheckIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
 const itemHeight = 8;
 const itemWidth = 8;
 
 const items = [
     {
-        id: 1,
-        icon: <EditIcon color="primary.700" h={itemHeight} w={itemWidth} />,
-        title: "Input your preferences",
-        desc: "Give us areas you would be interested in getting an internship in as well as areas you have experience in",
-        link: "/",
-    },
-    {
         id: 2,
-        icon: <CheckIcon color="primary.700" h={itemHeight} w={itemWidth} />,
+        icon: <CheckIcon color="secondary.900" h={itemHeight} w={itemWidth} />,
         title: "Gather your materials",
         desc: "Upload your resume or link us your linkedin and fill out a few common application questions",
         link: "/",
     },
     {
         id: 3,
-        icon: <CalendarIcon color="primary.700" h={itemHeight} w={itemWidth} />,
+        icon: <CalendarIcon color="secondary.900" h={itemHeight} w={itemWidth} />,
         title: "Get personalized internships",
         desc: "Based on your preferences we will curate a personal list of internships that you can customize",
         link: "/",
     },
     {
         id: 4,
-        icon: <ArrowRightIcon color="primary.700" h={itemHeight} w={itemWidth} />,
+        icon: <ArrowRightIcon color="secondary.900" h={itemHeight} w={itemWidth} />,
         title: "We apply to internships",
         desc: "Once you approve your internship applications we will apply to them and optimize your materials for each one",
         link: "/",
@@ -42,49 +35,56 @@ interface ItemProps {
     icon: ReactElement;
 }
 
-const ItemRow = ({ title, desc, icon }: ItemProps) => {
+const Item = ({ title, desc, icon }: ItemProps) => {
     return (
-        <Flex>
-            <Box padding={6} border="2px" borderColor="gray" m="auto">
-                {icon}
-            </Box>
-            <Flex boxSizing="border-box" direction="column" justifyContent="center" m={5}>
+        <GridItem colSpan={1}>
+            <Flex
+                boxSizing="border-box"
+                direction="column"
+                textAlign="center"
+                align="center"
+                justify="center"
+                p={4}
+            >
+                <Box p={4} m="auto">
+                    {icon}
+                </Box>
                 <Heading as="h5" size="md">
                     {" "}
                     {title}{" "}
                 </Heading>
                 <Text> {desc} </Text>
             </Flex>
-        </Flex>
+        </GridItem>
     );
 };
 
-// interface FeaturesProps {
-// featuresList: [FeatureItemProps]
-// }
-
 const HowItWorks = () => {
     return (
-        <Flex alignItems="center" direction="column" mt={12} px={8} py={16}>
-            <Box mb={8} textAlign="center">
-                <Heading as="h1" size="xl" fontWeight="bold" color="primary.800">
+        <Box bg="#ebebeb">
+            <Flex
+                direction="column"
+                align="center"
+                mb={8}
+                px={8}
+                py={16}
+            >
+                <Heading as="h1" size="lg" mb={8} fontWeight="bold" color="secondary.900">
                     How it works
                 </Heading>
-            </Box>
-            <Box w="75%">
-                {items.map((item, key) => (
-                    <ItemRow key={key} title={item.title} desc={item.desc} icon={item.icon} />
-                ))}
-            </Box>
-            <Box w="75%" textAlign="center">
-                <Heading as="h3" size="md" fontWeight="bold" color="primary.800">
-                    You Control Every Step
-                </Heading>
-                <Text>
-                    We only apply to jobs that you approve of. If we don't have enough information to complete an application, we flag it and wait for your input before completing it. We screen record our process and give updates daily.
-                </Text>
-            </Box>
-        </Flex>
+                <Grid
+                    templateColumns={{
+                        base: "repeat(1, 1fr)",
+                        md: "repeat(3, minmax(0, 1fr))",
+                    }}
+                    textAlign="center"
+                >
+                    {items.map((item, key) => (
+                        <Item key={key} title={item.title} desc={item.desc} icon={item.icon} />
+                    ))}
+                </Grid>
+            </Flex>
+        </Box>
     );
 };
 

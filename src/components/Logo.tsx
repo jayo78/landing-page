@@ -3,9 +3,9 @@ import { Box, Text } from "@chakra-ui/react";
 
 export default function Logo() {
     return (
-        <Box w="100px" color={["white", "white", "primary.500", "primary.500"]}>
+        <Box w="105px" color={["white", "white", "secondary.900", "secondary.900"]}>
             <Text fontSize="lg" fontWeight="bold">
-                BoostApps
+                BoostApply
             </Text>
         </Box>
     );

@@ -44,7 +44,17 @@ const colors = {
         800: "#444276",
         900: "#36355F",
     },
-    secondary: "#FE6B61",
+    secondary: {
+        100: "#ffc7c4",
+        200: "#feaba6",
+        300: "#fe8b83",
+        400: "#fe6b61",
+        500: "#fe4b3e",
+        600: "#fe2719",
+        700: "#ef1102",
+        800: "#c90e01",
+        900: "#a30b01",
+    },
 };
 
 const customTheme = extendTheme({ colors });

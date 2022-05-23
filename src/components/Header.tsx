@@ -51,7 +51,7 @@ const Header = () => {
             w="100%"
             p={8}
             bg={["primary.400", "primary.400", "transparent", "transparent"]}
-            color={["white", "white", "primary.400", "primary.400"]}
+            color={["white", "white", "black", "black"]}
         >
             <Flex align="center">
                 <Logo />
@@ -78,15 +78,11 @@ const Header = () => {
                         <Button
                             size="sm"
                             rounded="md"
-                            color={["primary.500", "primary.500", "white", "white"]}
-                            bg={["white", "white", "primary.500", "primary.500"]}
+                            color="white"
+                            border="2px"
+                            bg="secondary.900"
                             _hover={{
-                                bg: [
-                                    "primary.100",
-                                    "primary.100",
-                                    "primary.600",
-                                    "primary.600",
-                                ],
+                                bg: "secondary.400",
                             }}
                         >
                             Weekly Drop
