@@ -30,7 +30,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
                     as="h1"
                     size="xl"
                     fontWeight="bold"
-                    color="secondary.900"
+                    color="#353e44"
                     textAlign={["center", "center", "left", "left"]}
                 >
                     {title}
@@ -38,7 +38,7 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
                 <Heading
                     as="h2"
                     size="md"
-                    color="secondary.900"
+                    color="#353e44"
                     opacity="0.8"
                     fontWeight="normal"
                     lineHeight={1.5}
@@ -48,10 +48,10 @@ const Hero = ({ title, subtitle, image, ctaLink, ctaText }: HeroProps) => {
                 </Heading>
                 <Link href={ctaLink}>
                     <Button
-                        bg="secondary.100"
-                        color="secondary.900"
+                        bg="white"
+                        color="secondary.400"
                         border="2px"
-                        borderColor="secondary.900"
+                        borderColor="secondary.400"
                         borderRadius="8px"
                         py="4"
                         px="4"

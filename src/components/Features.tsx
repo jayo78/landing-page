@@ -40,15 +40,15 @@ const Features = () => {
             >
                 <GridItem colSpan={1}>
                     <VStack alignItems="flex-start" spacing="20px">
-                        <Heading as="h2" size="lg" fontWeight="bold" color="secondary.900">
+                        <Heading as="h2" size="lg" fontWeight="bold" color="#353e44">
                             You Control Every Step
                         </Heading>
                         <Link href="https://mvvx7n3l5y5.typeform.com/to/YSSf3A3S">
                             <Button
-                                bg="secondary.100"
-                                color="secondary.900"
+                                bg="white"
+                                color="secondary.400"
                                 border="2px"
-                                borderColor="secondary.900"
+                                borderColor="secondary.400"
                                 borderRadius="8px"
                                 py="4"
                                 px="4"
@@ -68,7 +68,7 @@ const Features = () => {
                     </VStack>
                 </GridItem>
                 <GridItem colSpan={2}>
-                    <Box borderLeft="2px" borderColor="secondary.800">
+                    <Box borderLeft="2px" borderColor="#353e44">
                         <Grid
                             templateColumns={{
                                 base: "repeat(1, 1fr)",

@@ -51,7 +51,7 @@ const Header = () => {
             w="100%"
             p={8}
             bg={["secondary.400", "secondary.100", "transparent", "transparent"]}
-            color={["white", "white", "black", "black"]}
+            color={["white", "white", "#353e44", "#353e44"]}
         >
             <Flex align="center">
                 <Logo />
@@ -80,7 +80,7 @@ const Header = () => {
                             rounded="md"
                             color="white"
                             border="2px"
-                            bg="secondary.900"
+                            bg="secondary.400"
                             _hover={{
                                 bg: "secondary.400",
                             }}

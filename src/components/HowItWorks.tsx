@@ -8,21 +8,21 @@ const itemWidth = 8;
 const items = [
     {
         id: 2,
-        icon: <CheckIcon color="secondary.900" h={itemHeight} w={itemWidth} />,
+        icon: <CheckIcon color="secondary.400" h={itemHeight} w={itemWidth} />,
         title: "Gather your materials",
         desc: "Upload your resume or link us your linkedin and fill out a few common application questions",
         link: "/",
     },
     {
         id: 3,
-        icon: <CalendarIcon color="secondary.900" h={itemHeight} w={itemWidth} />,
+        icon: <CalendarIcon color="secondary.400" h={itemHeight} w={itemWidth} />,
         title: "Get personalized internships",
         desc: "Based on your preferences we will curate a personal list of internships that you can customize",
         link: "/",
     },
     {
         id: 4,
-        icon: <ArrowRightIcon color="secondary.900" h={itemHeight} w={itemWidth} />,
+        icon: <ArrowRightIcon color="secondary.400" h={itemHeight} w={itemWidth} />,
         title: "We apply to internships",
         desc: "Once you approve your internship applications we will apply to them and optimize your materials for each one",
         link: "/",
@@ -41,6 +41,11 @@ const Item = ({ title, desc, icon }: ItemProps) => {
             <Flex
                 boxSizing="border-box"
                 direction="column"
+                bg="white"
+                mx={4}
+                my={{base: 4, md: 4, lg: 0}}
+                rounded="1rem"
+                shadow="2xl"
                 textAlign="center"
                 align="center"
                 justify="center"
@@ -61,15 +66,9 @@ const Item = ({ title, desc, icon }: ItemProps) => {
 
 const HowItWorks = () => {
     return (
-        <Box bg="#ebebeb">
-            <Flex
-                direction="column"
-                align="center"
-                mb={8}
-                px={8}
-                py={16}
-            >
-                <Heading as="h1" size="lg" mb={8} fontWeight="bold" color="secondary.900">
+        <Box bg="#f7f7f7">
+            <Flex direction="column" align="center" mb={8} px={8} py={16}>
+                <Heading as="h1" size="lg" mb={8} fontWeight="bold" color="#353e44">
                     How it works
                 </Heading>
                 <Grid
