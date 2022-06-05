@@ -1,29 +1,25 @@
 import React, { ReactElement } from "react";
 import { Text, Grid, GridItem, Flex, Heading, Box } from "@chakra-ui/react";
-import { CalendarIcon, CheckIcon, ArrowRightIcon } from "@chakra-ui/icons";
 
 const itemHeight = 8;
 const itemWidth = 8;
 
 const items = [
     {
-        id: 2,
-        icon: <CheckIcon color="secondary.400" h={itemHeight} w={itemWidth} />,
-        title: "Gather your materials",
+        num: 1,
+        title: "You Upload",
         desc: "Upload your resume or link us your linkedin and fill out a few common application questions",
         link: "/",
     },
     {
-        id: 3,
-        icon: <CalendarIcon color="secondary.400" h={itemHeight} w={itemWidth} />,
-        title: "Get personalized internships",
+        num: 2,
+        title: "We Find",
         desc: "Based on your preferences we will curate a personal list of internships that you can customize",
         link: "/",
     },
     {
-        id: 4,
-        icon: <ArrowRightIcon color="secondary.400" h={itemHeight} w={itemWidth} />,
-        title: "We apply to internships",
+        num: 3,
+        title: "Get Interviews",
         desc: "Once you approve your internship applications we will apply to them and optimize your materials for each one",
         link: "/",
     },
@@ -32,10 +28,10 @@ const items = [
 interface ItemProps {
     title: string;
     desc: string;
-    icon: ReactElement;
+    num: number;
 }
 
-const Item = ({ title, desc, icon }: ItemProps) => {
+const Item = ({ title, desc, num }: ItemProps) => {
     return (
         <GridItem colSpan={1}>
             <Flex
@@ -43,7 +39,7 @@ const Item = ({ title, desc, icon }: ItemProps) => {
                 direction="column"
                 bg="white"
                 mx={4}
-                my={{base: 4, md: 4, lg: 0}}
+                my={{ base: 4, md: 4, lg: 0 }}
                 rounded="1rem"
                 shadow="2xl"
                 textAlign="center"
@@ -51,14 +47,14 @@ const Item = ({ title, desc, icon }: ItemProps) => {
                 justify="center"
                 p={4}
             >
-                <Box p={4} m="auto">
-                    {icon}
-                </Box>
+                <Heading as="h5" color="secondary.400" size="md" p={4} m="auto">
+                    {num}
+                </Heading>
                 <Heading as="h5" size="md">
                     {" "}
                     {title}{" "}
                 </Heading>
-                <Text> {desc} </Text>
+                <Text mt={2}> {desc} </Text>
             </Flex>
         </GridItem>
     );
@@ -79,7 +75,7 @@ const HowItWorks = () => {
                     textAlign="center"
                 >
                     {items.map((item, key) => (
-                        <Item key={key} title={item.title} desc={item.desc} icon={item.icon} />
+                        <Item key={key} title={item.title} desc={item.desc} num={item.num} />
                     ))}
                 </Grid>
             </Flex>

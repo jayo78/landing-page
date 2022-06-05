@@ -50,7 +50,7 @@ const Header = () => {
             wrap="wrap"
             w="100%"
             p={8}
-            bg={["secondary.400", "secondary.100", "transparent", "transparent"]}
+            bg={["secondary.400", "secondary.400", "transparent", "transparent"]}
             color={["white", "white", "#353e44", "#353e44"]}
         >
             <Flex align="center">
